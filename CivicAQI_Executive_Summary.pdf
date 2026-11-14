@@ -1,0 +1,145 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 4 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 5 0 R /Resources << /Font << /F1 7 0 R /F2 8 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 6 0 R /Resources << /Font << /F1 7 0 R /F2 8 0 R >> >> >>
+endobj
+5 0 obj
+<< /Length 4826 >>
+stream
+0.96 0.97 0.99 rg 30 720 535 90 re f
+0.15 0.39 0.92 RG 2 w 30 720 m 565 720 l S
+BT /F2 20 Tf 0.06 0.09 0.16 rg 45 780 Td (CivicAQI - AI Civic Intelligence Platform) Tj ET
+BT /F2 11 Tf 0.15 0.39 0.92 rg 45 760 Td (Executive Summary & Operational Mandate) Tj ET
+BT /F1 9 Tf 0.39 0.45 0.55 rg 45 740 Td (Architecture: Zero-Framework Node.js | Google ADC & Vertex AI Gemini | Firebase RBAC) Tj ET
+BT /F2 9 Tf 0.39 0.45 0.55 rg 440 740 Td (Release: promptswar) Tj ET
+0.15 0.39 0.92 rg 45 690 4 16 re f
+BT /F2 13 Tf 0.06 0.09 0.16 rg 55 693 Td (1. Official Civic Problem Mandate) Tj ET
+0.97 0.98 0.99 rg 45 560 505 120 re f 0.88 0.91 0.94 RG 1 w 45 560 505 120 re S
+BT /F1 9 Tf 0.2 0.25 0.33 rg 55 660 Td ("Develop an AI-driven civic intelligence solution that enables local authorities, housing societies,) Tj ET
+BT /F1 9 Tf 0.2 0.25 0.33 rg 55 648 Td (and ward-level teams to turn raw air quality data into actionable local interventions. The solution) Tj ET
+BT /F1 9 Tf 0.2 0.25 0.33 rg 55 636 Td (must leverage Generative AI as a core component to interpret pasted or uploaded data tables,) Tj ET
+BT /F1 9 Tf 0.2 0.25 0.33 rg 55 624 Td (including messy ones with inconsistent formats, units, or missing readings, and summarize trends) Tj ET
+BT /F1 9 Tf 0.2 0.25 0.33 rg 55 612 Td (and likely hotspots in plain language. It should recommend prioritized local actions suited to who) Tj ET
+BT /F1 9 Tf 0.2 0.25 0.33 rg 55 600 Td (is asking, since a ward officer, a housing society, and a school can each do different things. Every) Tj ET
+BT /F1 9 Tf 0.2 0.25 0.33 rg 55 588 Td (finding should be traceable to the underlying data, with data gaps and unreliable readings clearly flagged.) Tj ET
+BT /F1 9 Tf 0.2 0.25 0.33 rg 55 576 Td (The assistant should compare each new brief with the previous one to show what changed, and generate) Tj ET
+BT /F1 9 Tf 0.2 0.25 0.33 rg 55 564 Td (both an internal briefing note and a citizen advisory in multiple languages, written for different reading levels.") Tj ET
+0.15 0.39 0.92 rg 45 525 4 16 re f
+BT /F2 13 Tf 0.06 0.09 0.16 rg 55 528 Td (2. Master Engineering Specifications Built) Tj ET
+0.95 0.97 1.0 rg 45 495 505 22 re f 0.85 0.9 0.98 RG 0.5 w 45 495 505 22 re S
+BT /F2 9.5 Tf 0.15 0.39 0.92 rg 55 501 Td (PRD.md:) Tj ET
+BT /F1 9 Tf 0.2 0.25 0.33 rg 140 501 Td (Product Requirements Document detailing user personas, FR-1 to FR-10 functional specs & KPIs.) Tj ET
+0.95 0.97 1.0 rg 45 469 505 22 re f 0.85 0.9 0.98 RG 0.5 w 45 469 505 22 re S
+BT /F2 9.5 Tf 0.15 0.39 0.92 rg 55 475 Td (TRD.md:) Tj ET
+BT /F1 9 Tf 0.2 0.25 0.33 rg 140 475 Td (Technical Requirements Document defining zero-dependency server topology, APIs & security.) Tj ET
+0.95 0.97 1.0 rg 45 443 505 22 re f 0.85 0.9 0.98 RG 0.5 w 45 443 505 22 re S
+BT /F2 9.5 Tf 0.15 0.39 0.92 rg 55 449 Td (DESIGN.md:) Tj ET
+BT /F1 9 Tf 0.2 0.25 0.33 rg 140 449 Td (System Architecture & UI/UX Design covering responsive vw/vh/rem units, Delta algorithm & flow.) Tj ET
+0.95 0.97 1.0 rg 45 417 505 22 re f 0.85 0.9 0.98 RG 0.5 w 45 417 505 22 re S
+BT /F2 9.5 Tf 0.15 0.39 0.92 rg 55 423 Td (PROMPTS.md:) Tj ET
+BT /F1 9 Tf 0.2 0.25 0.33 rg 140 423 Td (Master Prompt Engineering specifications for Gemini 2.5 Flash/Pro multimodal reasoning & JSON schema.) Tj ET
+0.15 0.39 0.92 rg 45 375 4 16 re f
+BT /F2 13 Tf 0.06 0.09 0.16 rg 55 378 Td (3. High-Impact System Capabilities) Tj ET
+BT /F1 9 Tf 0.15 0.2 0.28 rg 55 350 Td ([*] Multimodal Ingestion: Ingests unstructured CSVs, raw tables, WhatsApp forwards & display monitor photos.) Tj ET
+BT /F1 9 Tf 0.15 0.2 0.28 rg 55 334 Td ([*] Live Ground Truth: Cross-validates against live Open-Meteo & India Post APIs, correlated with CPCB stations.) Tj ET
+BT /F1 9 Tf 0.15 0.2 0.28 rg 55 318 Td ([*] 200-300 Word Executive Brief: High-impact synthesis documenting severity, epicenter pincodes & gaps.) Tj ET
+BT /F1 9 Tf 0.15 0.2 0.28 rg 55 302 Td ([*] Native Canvas 2D Charts: Zero-dependency Bezier curves and multi-metric pollutant safety limit bars.) Tj ET
+BT /F1 9 Tf 0.15 0.2 0.28 rg 55 286 Td ([*] Brief-to-Brief Delta \(Delta AQI\): Tracks percentage changes and categorized trajectories \(Worsening/Improving\).) Tj ET
+BT /F1 9 Tf 0.15 0.2 0.28 rg 55 270 Td ([*] Google ADC & Vertex AI: Authenticates via Service Account RS256 JWT assertion with SSE token streaming.) Tj ET
+BT /F1 9 Tf 0.15 0.2 0.28 rg 55 254 Td ([*] Firebase Auth & Civic RBAC: Enforces role-based permissions with designation, address & pincode persistence.) Tj ET
+BT /F1 9 Tf 0.15 0.2 0.28 rg 55 238 Td ([*] 30-Minute Local Sync Pulse: Background synchronization timer with on-demand manual trigger & JSON log.) Tj ET
+0.85 0.88 0.92 RG 1 w 45 50 m 550 50 l S
+BT /F1 8 Tf 0.5 0.55 0.65 rg 45 38 Td (CivicAQI Platform Summary - Public Release promptswar) Tj ET
+BT /F1 8 Tf 0.5 0.55 0.65 rg 510 38 Td (Page 1 of 2) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Length 5576 >>
+stream
+0.15 0.39 0.92 RG 2 w 30 800 m 565 800 l S
+BT /F2 14 Tf 0.06 0.09 0.16 rg 45 810 Td (CivicAQI - Stakeholder Action Matrix & Governance) Tj ET
+0.15 0.39 0.92 rg 45 770 4 16 re f
+BT /F2 13 Tf 0.06 0.09 0.16 rg 55 773 Td (4. Role-Tailored Prioritized Intervention Matrix) Tj ET
+0.97 0.98 0.99 rg 45 735 505 50 re f 0.88 0.91 0.95 RG 0.5 w 45 735 505 50 re S
+BT /F2 9.5 Tf 0.15 0.39 0.92 rg 55 771 Td (Ward Officer / Municipal Admin \(Admin Privilege\)) Tj ET
+BT /F2 8.5 Tf 0.8 0.1 0.1 rg 55 757 Td (P0 [Immediate]:) Tj ET
+BT /F1 8.5 Tf 0.15 0.2 0.28 rg 135 757 Td (Deploy mobile high-pressure water misting guns to arterial corridors; halt uncurtained excavation.) Tj ET
+BT /F2 8.5 Tf 0.1 0.5 0.2 rg 55 743 Td (P1 [Precautionary]:) Tj ET
+BT /F1 8.5 Tf 0.15 0.2 0.28 rg 165 743 Td (Schedule nighttime mechanized vacuum sweeping; coordinate traffic freight diversions.) Tj ET
+0.97 0.98 0.99 rg 45 680 505 50 re f 0.88 0.91 0.95 RG 0.5 w 45 680 505 50 re S
+BT /F2 9.5 Tf 0.15 0.39 0.92 rg 55 716 Td (Housing Society / RWA \(Community Facility\)) Tj ET
+BT /F2 8.5 Tf 0.8 0.1 0.1 rg 55 702 Td (P0 [Immediate]:) Tj ET
+BT /F1 8.5 Tf 0.15 0.2 0.28 rg 135 702 Td (Curtail non-essential diesel generator \(DG\) runtime; activate driveway boundary misting twice daily.) Tj ET
+BT /F2 8.5 Tf 0.1 0.5 0.2 rg 55 688 Td (P1 [Precautionary]:) Tj ET
+BT /F1 8.5 Tf 0.15 0.2 0.28 rg 165 688 Td (Issue resident WhatsApp smog warnings; enforce strict cab and delivery gate no-idling rules.) Tj ET
+0.97 0.98 0.99 rg 45 625 505 50 re f 0.88 0.91 0.95 RG 0.5 w 45 625 505 50 re S
+BT /F2 9.5 Tf 0.15 0.39 0.92 rg 55 661 Td (School / University Authority \(Campus Health\)) Tj ET
+BT /F2 8.5 Tf 0.8 0.1 0.1 rg 55 647 Td (P0 [Immediate]:) Tj ET
+BT /F1 8.5 Tf 0.15 0.2 0.28 rg 135 647 Td (Suspend all outdoor sports, morning assemblies & recess; switch classroom HEPA purifiers to max.) Tj ET
+BT /F2 8.5 Tf 0.1 0.5 0.2 rg 55 633 Td (P1 [Precautionary]:) Tj ET
+BT /F1 8.5 Tf 0.15 0.2 0.28 rg 165 633 Td (Mandate N95 masks during bus transit; equip campus infirmary with nebulizers & oxygen triage.) Tj ET
+0.97 0.98 0.99 rg 45 570 505 50 re f 0.88 0.91 0.95 RG 0.5 w 45 570 505 50 re S
+BT /F2 9.5 Tf 0.15 0.39 0.92 rg 55 606 Td (Commercial & Construction Leads \(Operations\)) Tj ET
+BT /F2 8.5 Tf 0.8 0.1 0.1 rg 55 592 Td (P0 [Immediate]:) Tj ET
+BT /F1 8.5 Tf 0.15 0.2 0.28 rg 135 592 Td (Upgrade HVAC filtration to MERV 13 with indoor air recirculation; tarp all cement/sand piles.) Tj ET
+BT /F2 8.5 Tf 0.1 0.5 0.2 rg 55 578 Td (P1 [Precautionary]:) Tj ET
+BT /F1 8.5 Tf 0.15 0.2 0.28 rg 165 578 Td (Stagger morning worker arrival shifts away from temperature inversion; inspect diesel haulers.) Tj ET
+0.97 0.98 0.99 rg 45 515 505 50 re f 0.88 0.91 0.95 RG 0.5 w 45 515 505 50 re S
+BT /F2 9.5 Tf 0.15 0.39 0.92 rg 55 551 Td (Local Citizens & Households \(Public Advisory\)) Tj ET
+BT /F2 8.5 Tf 0.8 0.1 0.1 rg 55 537 Td (P0 [Immediate]:) Tj ET
+BT /F1 8.5 Tf 0.15 0.2 0.28 rg 135 537 Td (Avoid outdoor morning cardio; wear certified, fitted N95/FFP2 respirators during necessary transit.) Tj ET
+BT /F2 8.5 Tf 0.1 0.5 0.2 rg 55 523 Td (P1 [Precautionary]:) Tj ET
+BT /F1 8.5 Tf 0.15 0.2 0.28 rg 165 523 Td (Submit verified geo-tagged reports for illegal open waste or leaf burning to the municipal desk.) Tj ET
+0.15 0.39 0.92 rg 45 435 4 16 re f
+BT /F2 13 Tf 0.06 0.09 0.16 rg 55 438 Td (5. Multi-Lingual Citizen Advisories & Legal Provisions) Tj ET
+0.96 0.97 1.0 rg 45 355 505 68 re f 0.85 0.9 0.98 RG 0.5 w 45 355 505 68 re S
+BT /F2 9.5 Tf 0.06 0.09 0.16 rg 55 405 Td (Vulnerability Stratification & Regional Support:) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.33 rg 55 390 Td (Supported Languages: English, Hindi, Marathi, Tamil, Bengali with simplified readability scales.) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.33 rg 55 376 Td (Children & Students: School sport restrictions, mask fit and indoor recess.) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.33 rg 55 362 Td (Older Adults & Asthmatics: Air purification, window seals, medication readiness & smog walks.) Tj ET
+0.99 0.97 0.96 rg 45 270 505 72 re f 0.95 0.88 0.85 RG 0.5 w 45 270 505 72 re S
+BT /F2 9.5 Tf 0.6 0.2 0.1 rg 55 324 Td (Statutory Civic Directive - Section 133 CrPC / Air Act 1981:) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.33 rg 55 308 Td (The platform generates formal environmental directives with official reference codes pre-filled with) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.33 rg 55 294 Td (measured PM2.5/AQI, official CPCB station correlation, and mandated on-site compliance timelines,) Tj ET
+BT /F1 8.5 Tf 0.2 0.25 0.33 rg 55 280 Td (addressed directly to the Sub-Divisional Magistrate (SDM) & Executive Ward Engineer.) Tj ET
+0.15 0.39 0.92 rg 45 240 4 16 re f
+BT /F2 13 Tf 0.06 0.09 0.16 rg 55 243 Td (6. Strict Zero-Dependency Technical Compliance) Tj ET
+BT /F1 8.5 Tf 0.15 0.2 0.28 rg 55 220 Td ([*] Runtime: Pure native Node.js \(v18+\) using built-in http, https, crypto, fs modules without npm packages.) Tj ET
+BT /F1 8.5 Tf 0.15 0.2 0.28 rg 55 206 Td ([*] Frontend: Pure Vanilla HTML5 & CSS3 using responsive vw, vh, rem, and clamp\(\) typography and scaling.) Tj ET
+BT /F1 8.5 Tf 0.15 0.2 0.28 rg 55 192 Td ([*] Visualizations: Native HTML5 2D Canvas charting engine with zero D3 / Chart.js dependencies.) Tj ET
+BT /F1 8.5 Tf 0.15 0.2 0.28 rg 55 178 Td ([*] Google Cloud ADC: Service Account RS256 JWT assertion exchange for Vertex AI Gemini multimodal inference.) Tj ET
+0.85 0.88 0.92 RG 1 w 45 50 m 550 50 l S
+BT /F1 8 Tf 0.5 0.55 0.65 rg 45 38 Td (CivicAQI Platform Summary - Public Release promptswar) Tj ET
+BT /F1 8 Tf 0.5 0.55 0.65 rg 510 38 Td (Page 2 of 2) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+8 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000257 00000 n 
+0000000393 00000 n 
+0000005271 00000 n 
+0000010896 00000 n 
+0000010966 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+11041
+%%EOF

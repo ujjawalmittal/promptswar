@@ -1,0 +1,242 @@
+[
+  {
+    "id": "brief_1794643856508",
+    "timestamp": "2026-11-14T08:10:56.508Z",
+    "pincode": "110085",
+    "aqi": 130,
+    "category": "Moderate",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by +28 points (27.5%) against previous brief. Critical hotspot remains Pincode 110085.",
+    "engine": "Fallback (ADC/Gemini Error: Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. )"
+  },
+  {
+    "id": "brief_1794643818456",
+    "timestamp": "2026-11-14T08:10:18.456Z",
+    "pincode": "110085",
+    "aqi": 130,
+    "category": "Moderate",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by +28 points (27.5%) against previous brief. Critical hotspot remains Pincode 110085.",
+    "engine": "Fallback (ADC/Gemini Error: Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/gen-lang-client-0751641192/locations/us-central1/publishers/google/models/gemini-3.6-flash' (or it may not exist). Remediate access with this Troubleshooter URL or share it with your administrator - https://console.cloud.google.com/iam-admin/troubleshooter/summary;errorId=CiQwMWExZDkxYi03NjQ1LTc5ZTMtOWI5OC02YjI2NjM2OGM4OTMSY3Byb2plY3RzL2dlbi1sYW5nLWNsaWVudC0wNzUxNjQxMTkyL2xvY2F0aW9ucy91cy1jZW50cmFsMS9wdWJsaXNoZXJzL2dvb2dsZS9tb2RlbHMvZ2VtaW5pLTMuNi1mbGFzaA%3D%3D .)"
+  },
+  {
+    "id": "brief_1794643741563",
+    "timestamp": "2026-11-14T08:09:01.563Z",
+    "pincode": "110085",
+    "aqi": 130,
+    "category": "Moderate",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by +28 points (27.5%) against previous brief. Critical hotspot remains Pincode 110085.",
+    "engine": "Fallback (ADC/Gemini Error: Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/gen-lang-client-0751641192/locations/us-central1/publishers/google/models/gemini-3.6-flash' (or it may not exist). Remediate access with this Troubleshooter URL or share it with your administrator - https://console.cloud.google.com/iam-admin/troubleshooter/summary;errorId=CiQwMWExZDkxYS00OWViLTc4MWItYTljYS1kNWNkOGJhM2YwODESY3Byb2plY3RzL2dlbi1sYW5nLWNsaWVudC0wNzUxNjQxMTkyL2xvY2F0aW9ucy91cy1jZW50cmFsMS9wdWJsaXNoZXJzL2dvb2dsZS9tb2RlbHMvZ2VtaW5pLTMuNi1mbGFzaA%3D%3D .)"
+  },
+  {
+    "id": "brief_1794643509416",
+    "timestamp": "2026-11-14T08:05:09.416Z",
+    "pincode": "462001",
+    "aqi": 79,
+    "category": "Satisfactory",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by -51 points (-39.2%) against previous brief. Critical hotspot remains Pincode 462001.",
+    "engine": "Fallback (ADC/Gemini Error: Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/gen-lang-client-0751641192/locations/us-central1/publishers/google/models/gemini-3.5-flash' (or it may not exist). Remediate access with this Troubleshooter URL or share it with your administrator - https://console.cloud.google.com/iam-admin/troubleshooter/summary;errorId=CiQwMWExZDkxNi1iZDE2LTc5YzktOWFkMy1kOWM4ZjJkNWZhNmESY3Byb2plY3RzL2dlbi1sYW5nLWNsaWVudC0wNzUxNjQxMTkyL2xvY2F0aW9ucy91cy1jZW50cmFsMS9wdWJsaXNoZXJzL2dvb2dsZS9tb2RlbHMvZ2VtaW5pLTMuNS1mbGFzaA%3D%3D .)"
+  },
+  {
+    "id": "brief_1794643489261",
+    "timestamp": "2026-11-14T08:04:49.261Z",
+    "pincode": "110085",
+    "aqi": 130,
+    "category": "Moderate",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by +28 points (27.5%) against previous brief. Critical hotspot remains Pincode 110085.",
+    "engine": "Fallback (ADC/Gemini Error: Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/gen-lang-client-0751641192/locations/us-central1/publishers/google/models/gemini-3.5-flash' (or it may not exist). Remediate access with this Troubleshooter URL or share it with your administrator - https://console.cloud.google.com/iam-admin/troubleshooter/summary;errorId=CiQwMWExZDkxNi03MDY5LTcxYjAtOGI3MS00NmRlZjRlZDI2NGUSY3Byb2plY3RzL2dlbi1sYW5nLWNsaWVudC0wNzUxNjQxMTkyL2xvY2F0aW9ucy91cy1jZW50cmFsMS9wdWJsaXNoZXJzL2dvb2dsZS9tb2RlbHMvZ2VtaW5pLTMuNS1mbGFzaA%3D%3D .)"
+  },
+  {
+    "id": "brief_1794643475426",
+    "timestamp": "2026-11-14T08:04:35.426Z",
+    "pincode": "110085",
+    "aqi": 130,
+    "category": "Moderate",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by +0 points (0.0%) against previous brief. Critical hotspot remains Pincode 110085.",
+    "engine": "Fallback (ADC/Gemini Error: Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/gen-lang-client-0751641192/locations/us-central1/publishers/google/models/gemini-3.5-flash' (or it may not exist). Remediate access with this Troubleshooter URL or share it with your administrator - https://console.cloud.google.com/iam-admin/troubleshooter/summary;errorId=CiQwMWExZDkxNi0zYTYyLTdiZTItYWM0ZS1mZDQ3NDFmNjNjMTgSY3Byb2plY3RzL2dlbi1sYW5nLWNsaWVudC0wNzUxNjQxMTkyL2xvY2F0aW9ucy91cy1jZW50cmFsMS9wdWJsaXNoZXJzL2dvb2dsZS9tb2RlbHMvZ2VtaW5pLTMuNS1mbGFzaA%3D%3D .)"
+  },
+  {
+    "id": "brief_1794643460635",
+    "timestamp": "2026-11-14T08:04:20.635Z",
+    "pincode": "110085",
+    "aqi": 130,
+    "category": "Moderate",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by +28 points (27.5%) against previous brief. Critical hotspot remains Pincode 110085.",
+    "engine": "Fallback (ADC/Gemini Error: Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/gen-lang-client-0751641192/locations/us-central1/publishers/google/models/gemini-3.5-flash' (or it may not exist). Remediate access with this Troubleshooter URL or share it with your administrator - https://console.cloud.google.com/iam-admin/troubleshooter/summary;errorId=CiQwMWExZDkxNi0wMDJiLTcyOWQtOTE0NC1iZjhlMDA3YWM3M2ESY3Byb2plY3RzL2dlbi1sYW5nLWNsaWVudC0wNzUxNjQxMTkyL2xvY2F0aW9ucy91cy1jZW50cmFsMS9wdWJsaXNoZXJzL2dvb2dsZS9tb2RlbHMvZ2VtaW5pLTMuNS1mbGFzaA%3D%3D .)"
+  },
+  {
+    "id": "brief_1794642580537",
+    "timestamp": "2026-11-14T07:49:40.537Z",
+    "pincode": "110085",
+    "aqi": 406,
+    "category": "Severe / Hazardous",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by +0 points (0.0%) against previous brief. Critical hotspot remains Pincode 110085.",
+    "engine": "Local Heuristic Engine (Enter Gemini Key for Live LLM)"
+  },
+  {
+    "id": "brief_1794642420686",
+    "timestamp": "2026-11-14T07:47:00.686Z",
+    "pincode": "110085",
+    "aqi": 406,
+    "category": "Severe / Hazardous",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by +28 points (7.4%) against previous brief. Critical hotspot remains Pincode 110085.",
+    "engine": "Local Heuristic Engine (Enter Gemini Key for Live LLM)"
+  },
+  {
+    "id": "brief_1794642406362",
+    "timestamp": "2026-11-14T07:46:46.362Z",
+    "pincode": "110085",
+    "aqi": 406,
+    "category": "Severe / Hazardous",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by +28 points (7.4%) against previous brief. Critical hotspot remains Pincode 110085.",
+    "engine": "Local Heuristic Engine (Enter Gemini Key for Live LLM)"
+  },
+  {
+    "id": "brief_1794642395707",
+    "timestamp": "2026-11-14T07:46:35.707Z",
+    "pincode": "110085",
+    "aqi": 406,
+    "category": "Severe / Hazardous",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by +28 points (7.4%) against previous brief. Critical hotspot remains Pincode 110085.",
+    "engine": "Local Heuristic Engine (Enter Gemini Key for Live LLM)"
+  },
+  {
+    "id": "brief_1794642390100",
+    "timestamp": "2026-11-14T07:46:30.100Z",
+    "pincode": "110085",
+    "aqi": 406,
+    "category": "Severe / Hazardous",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by +28 points (7.4%) against previous brief. Critical hotspot remains Pincode 110085.",
+    "engine": "Local Heuristic Engine (Enter Gemini Key for Live LLM)"
+  },
+  {
+    "id": "brief_1794642389507",
+    "timestamp": "2026-11-14T07:46:29.507Z",
+    "pincode": "110085",
+    "aqi": 406,
+    "category": "Severe / Hazardous",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by +28 points (7.4%) against previous brief. Critical hotspot remains Pincode 110085.",
+    "engine": "Local Heuristic Engine (Enter Gemini Key for Live LLM)"
+  },
+  {
+    "id": "brief_1794642384535",
+    "timestamp": "2026-11-14T07:46:24.535Z",
+    "pincode": "110085",
+    "aqi": 406,
+    "category": "Severe / Hazardous",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by +28 points (7.4%) against previous brief. Critical hotspot remains Pincode 110085.",
+    "engine": "Local Heuristic Engine (Enter Gemini Key for Live LLM)"
+  },
+  {
+    "id": "brief_1794642379457",
+    "timestamp": "2026-11-14T07:46:19.457Z",
+    "pincode": "110085",
+    "aqi": 406,
+    "category": "Severe / Hazardous",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by +28 points (7.4%) against previous brief. Critical hotspot remains Pincode 110085.",
+    "engine": "Local Heuristic Engine (Enter Gemini Key for Live LLM)"
+  },
+  {
+    "id": "brief_1794642332921",
+    "timestamp": "2026-11-14T07:45:32.921Z",
+    "pincode": "462041",
+    "aqi": 331,
+    "category": "Very Poor",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by +9 points (2.8%) against previous brief. Critical hotspot remains Pincode 462041."
+  },
+  {
+    "id": "brief_1794642332309",
+    "timestamp": "2026-11-14T07:45:32.309Z",
+    "pincode": "462041",
+    "aqi": 322,
+    "category": "Very Poor",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by +10 points (3.2%) against previous brief. Critical hotspot remains Pincode 462041."
+  },
+  {
+    "id": "brief_1794642243661",
+    "timestamp": "2026-11-14T07:44:03.661Z",
+    "pincode": "462041",
+    "aqi": 312,
+    "category": "Very Poor",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by -27 points (-8.0%) against previous brief. Critical hotspot remains Pincode 462041."
+  },
+  {
+    "id": "brief_1794642202973",
+    "timestamp": "2026-11-14T07:43:22.973Z",
+    "pincode": "462001",
+    "aqi": 339,
+    "category": "Very Poor",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by +12 points (3.7%) against previous brief. Critical hotspot remains Pincode 462001."
+  },
+  {
+    "id": "brief_1794642020947",
+    "timestamp": "2026-11-14T07:40:20.947Z",
+    "pincode": "462001",
+    "aqi": 327,
+    "category": "Very Poor",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by +2 points (0.6%) against previous brief. Critical hotspot remains Pincode 462001."
+  },
+  {
+    "id": "brief_1794641999132",
+    "timestamp": "2026-11-14T07:39:59.132Z",
+    "pincode": "462001",
+    "aqi": 325,
+    "category": "Very Poor",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by +13 points (4.2%) against previous brief. Critical hotspot remains Pincode 462001."
+  },
+  {
+    "id": "brief_1794641988865",
+    "timestamp": "2026-11-14T07:39:48.865Z",
+    "pincode": "ward1",
+    "aqi": 312,
+    "category": "Very Poor",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by -96 points (-23.5%) against previous brief. Critical hotspot remains Pincode ward1."
+  },
+  {
+    "id": "brief_1794641983281",
+    "timestamp": "2026-11-14T07:39:43.281Z",
+    "pincode": "110085",
+    "aqi": 408,
+    "category": "Severe / Hazardous",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by +11 points (2.8%) against previous brief. Critical hotspot remains Pincode 110085."
+  },
+  {
+    "id": "brief_1794641821629",
+    "timestamp": "2026-11-14T07:37:01.629Z",
+    "pincode": "110085",
+    "aqi": 397,
+    "category": "Very Poor",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by -6 points (-1.5%) against previous brief. Critical hotspot remains Pincode 110085."
+  },
+  {
+    "id": "brief_1794641820695",
+    "timestamp": "2026-11-14T07:37:00.695Z",
+    "pincode": "110085",
+    "aqi": 403,
+    "category": "Severe / Hazardous",
+    "primaryPollutant": "PM2.5",
+    "summary": "AQI shifted by -3 points (-0.7%) against previous brief. Critical hotspot remains Pincode 110085."
+  }
+]

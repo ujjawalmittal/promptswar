@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CivicAQI — AI-Driven Civic Intelligence Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="civic-header">
+    <div class="header-container">
+      <div class="brand-section">
+        <div class="brand-logo-badge">AQI</div>
+        <div>
+          <h1 class="brand-title">CivicAQI Intelligence</h1>
+          <p class="brand-subtitle">Hyper-Local Civic Action &amp; Pollution Mitigation Platform</p>
+        </div>
+      </div>
+
+      <div class="header-controls">
+        <span id="engineStatusBadge" class="engine-badge" title="Active AI Inference Engine">
+          🟡 Local Heuristic
+        </span>
+
+        <div class="sync-pill" title="Auto-synchronizes every 30 minutes">
+          <span class="sync-dot"></span>
+          <span id="syncTimeLabel">Synced just now</span>
+          <button class="btn-icon-sync" id="btnSyncNow" title="Manual Sync Now">⟳</button>
+        </div>
+
+        <button class="btn-secondary" id="btnOpenApiConfig" title="Configure Gemini API Key & Firebase Auth">
+          🔑 API &amp; Auth Config
+        </button>
+
+        <button class="btn-secondary" id="btnOpenAuth" title="Firebase Login / Civic Profile">
+          🔐 <span id="headerUserLabel">Login / Profile</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Dashboard Content -->
+  <main class="civic-main-content">
+
+    <!-- Top Stats & Benchmark Ribbon -->
+    <section class="benchmark-ribbon">
+      <div class="ribbon-card alert-severe">
+        <span class="ribbon-label">Current Composite AQI</span>
+        <div class="ribbon-value">
+          <span id="ribbonAqiVal">--</span>
+          <span id="ribbonAqiCategory" style="font-size: 0.9rem; font-weight: 600; color: var(--text-muted);">Analyzing</span>
+        </div>
+        <span class="ribbon-subtext">Severity category across ward boundary</span>
+      </div>
+
+      <div class="ribbon-card alert-gov">
+        <span class="ribbon-label">Official Govt Station Benchmark</span>
+        <div class="ribbon-value">
+          <span id="ribbonGovVal">--</span>
+        </div>
+        <span class="ribbon-subtext" id="ribbonGovStation">Fetching nearest CPCB / State PCB node...</span>
+      </div>
+
+      <div class="ribbon-card alert-delta">
+        <span class="ribbon-label">Brief-to-Brief Delta (Δ)</span>
+        <div class="ribbon-value">
+          <span id="ribbonDeltaVal">--</span>
+        </div>
+        <span class="ribbon-subtext" id="ribbonDeltaText">Rate of change vs previous measurement</span>
+      </div>
+
+      <div class="ribbon-card">
+        <span class="ribbon-label">Driving Pollutant &amp; Access</span>
+        <div class="ribbon-value" style="font-size: 1.15rem;">
+          <span id="ribbonPrimaryPollutant">PM2.5</span>
+          <span id="rbacBadge" class="rbac-badge">ADMIN</span>
+        </div>
+        <span class="ribbon-subtext" id="ribbonUserSubtext">Role-based action privileges active</span>
+      </div>
+    </section>
+
+    <!-- Ingestion & Executive Synthesis Grid -->
+    <div class="dashboard-grid">
+
+      <!-- Left Panel: Multi-Modal Ingestion Desk -->
+      <section class="panel">
+        <div class="panel-header">
+          <h2 class="panel-title">
+            <span class="panel-title-icon">📥</span> Data Ingestion &amp; Normalizer
+          </h2>
+          <div class="tab-row">
+            <button class="tab-btn active" data-tab="paste">Paste / Raw</button>
+            <button class="tab-btn" data-tab="file">Upload CSV</button>
+            <button class="tab-btn" data-tab="image">Photo / Display</button>
+          </div>
+        </div>
+
+        <!-- Sample Loaders -->
+        <div class="sample-bar">
+          <span style="font-size: 0.75rem; color: var(--text-dim); margin-right: 0.25rem;">Load Sample:</span>
+          <button class="sample-chip" data-sample="messyTable">Messy Forward Table</button>
+          <button class="sample-chip" data-sample="citizenComplaintHindi">Hindi Citizen Report</button>
+          <button class="sample-chip" data-sample="schoolSportsEvent">School Sports Crisis</button>
+          <button class="sample-chip" data-sample="housingSocietyCrisis">Society DG Smog</button>
+        </div>
+
+        <!-- Ingest Textarea -->
+        <textarea id="rawTextInput" class="ingest-box" placeholder="Paste raw tables (CSV/TSV/WhatsApp text), citizen complaints in any language, or sensor log fragments here..."></textarea>
+
+        <!-- Dropzone for Files / Images -->
+        <div id="dropzone" class="dropzone" style="display: none;">
+          <span style="font-size: 1.8rem;">📁</span>
+          <p style="font-size: 0.9rem; font-weight: 600;">Select CSV/TXT file or Photo of display monitor</p>
+          <p style="font-size: 0.75rem; color: var(--text-dim);">Supported: .csv, .tsv, .txt, .png, .jpg, .webp</p>
+          <input type="file" id="fileInput" accept=".csv,.tsv,.txt" style="display: none;">
+          <input type="file" id="imageInput" accept="image/*" style="display: none;">
+          <img id="imagePreview" class="image-preview-box" alt="Monitor preview">
+        </div>
+
+        <!-- Ingestion Controls Form -->
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="pincodeInput">Ward / Pincode</label>
+            <input type="text" id="pincodeInput" class="form-input" value="110085" maxlength="6">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="roleSelect">Target Persona Role</label>
+            <select id="roleSelect" class="form-select">
+              <option value="super_admin">Super Admin (Full Civic Override)</option>
+              <option value="ward_officer" selected>Ward Officer / Municipal Admin</option>
+              <option value="housing_society">Housing Society / RWA Admin</option>
+              <option value="school">School / University Authority</option>
+              <option value="commercial">Commercial / Construction Lead</option>
+              <option value="citizen">Local Citizen / Household</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="langSelect">Advisory Language</label>
+            <select id="langSelect" class="form-select">
+              <option value="en">English</option>
+              <option value="hi">हिंदी (Hindi)</option>
+              <option value="mr">मराठी (Marathi)</option>
+              <option value="ta">தமிழ் (Tamil)</option>
+              <option value="bn">বাংলা (Bengali)</option>
+            </select>
+          </div>
+        </div>
+
+        <button id="btnAnalyze" class="btn-primary">
+          ✨ Process &amp; Synthesize (AI)
+        </button>
+      </section>
+
+      <!-- Right Panel: Executive Briefing & Data Audit -->
+      <section class="panel">
+        <div class="panel-header">
+          <h2 class="panel-title">
+            <span class="panel-title-icon">📋</span> Executive Briefing Note
+          </h2>
+          <span id="briefingWordCount" style="font-size: 0.75rem; color: var(--text-muted); font-family: monospace;">-- words</span>
+        </div>
+
+        <div id="briefingContainer" class="briefing-box">
+          Awaiting input processing...
+        </div>
+
+        <!-- Data Integrity & Gaps Audit -->
+        <div>
+          <h3 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.25rem;">
+            Traceability &amp; Sensor Gaps Audit
+          </h3>
+          <div id="dataGapsContainer"></div>
+        </div>
+
+        <!-- AI Clarification Prompt -->
+        <div id="clarificationContainer" class="clarification-banner" style="display: none;"></div>
+      </section>
+
+    </div>
+
+    <!-- Structured Normalized Tabular Data Panel -->
+    <section class="panel">
+      <div class="panel-header">
+        <h2 class="panel-title">
+          <span class="panel-title-icon">🧮</span> Structured &amp; Normalized Pollutant Table
+        </h2>
+        <span style="font-size: 0.8rem; color: var(--text-dim);">Every reading traced to its raw source</span>
+      </div>
+      <div class="data-table-wrapper">
+        <table class="civic-table">
+          <thead>
+            <tr>
+              <th>Pollutant</th>
+              <th>Measured Value</th>
+              <th>Standard Unit</th>
+              <th>Severity Status</th>
+              <th>Source Traceability</th>
+            </tr>
+          </thead>
+          <tbody id="normalizedTableBody">
+            <tr><td colspan="5" style="color: var(--text-dim);">Run analysis to populate structured metrics...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Charts & Spatial Hotspots Grid -->
+    <div class="dashboard-grid">
+
+      <!-- Canvas Charts Panel -->
+      <section class="panel">
+        <div class="panel-header">
+          <h2 class="panel-title">
+            <span class="panel-title-icon">📈</span> 24-Hour Trend &amp; Particulate Trajectory
+          </h2>
+        </div>
+        <div class="chart-container">
+          <canvas id="trendCanvas"></canvas>
+        </div>
+
+        <div class="panel-header" style="margin-top: var(--space-sm);">
+          <h2 class="panel-title">
+            <span class="panel-title-icon">📊</span> Multi-Pollutant Distribution vs Safe Thresholds
+          </h2>
+        </div>
+        <div class="chart-container">
+          <canvas id="pollutantCanvas"></canvas>
+        </div>
+      </section>
+
+      <!-- Hotspots & Assigned Interventions Panel -->
+      <section class="panel">
+        <div class="panel-header">
+          <h2 class="panel-title">
+            <span class="panel-title-icon">📍</span> Spatial Hotspots by Pincode
+          </h2>
+        </div>
+        <div id="hotspotContainer" class="hotspot-grid"></div>
+
+        <div class="panel-header" style="margin-top: var(--space-sm);">
+          <h2 class="panel-title">
+            <span class="panel-title-icon">⚡</span> Prioritized Role-Based Actions
+          </h2>
+          <span id="actionPrivilegeNote" style="font-size: 0.75rem; color: var(--civic-cyan);"></span>
+        </div>
+        <div id="actionListContainer" class="action-list"></div>
+      </section>
+
+    </div>
+
+    <!-- Targeted Multi-Lingual Citizen Advisories -->
+    <section class="panel">
+      <div class="panel-header">
+        <h2 class="panel-title">
+          <span class="panel-title-icon">🛡️</span> Multi-Lingual Targeted Citizen Advisories
+        </h2>
+        <span style="font-size: 0.8rem; color: var(--text-dim);">Tailored for vulnerable demographics &amp; precautionary/immediate tiers</span>
+      </div>
+
+      <div class="advisory-grid">
+        <div class="advisory-card">
+          <span class="advisory-target children">🧒 Children &amp; Students</span>
+          <p id="advChildren" class="advisory-body">--</p>
+        </div>
+
+        <div class="advisory-card">
+          <span class="advisory-target elderly">🧓 Older Adults</span>
+          <p id="advElderly" class="advisory-body">--</p>
+        </div>
+
+        <div class="advisory-card">
+          <span class="advisory-target sensitive">🫁 Asthmatics &amp; Sensitive Groups</span>
+          <p id="advSensitive" class="advisory-body">--</p>
+        </div>
+
+        <div class="advisory-card">
+          <span class="advisory-target commercial">🏢 Commercial &amp; Facility Managers <span class="severity-badge badge-moderate" style="margin-left:auto;">Precautionary</span></span>
+          <p id="advCommercial" class="advisory-body">--</p>
+        </div>
+
+        <div class="advisory-card">
+          <span class="advisory-target" style="color: #34d399;">🏘️ Local Residents &amp; General Public <span class="severity-badge badge-severe" style="margin-left:auto;">Immediate</span></span>
+          <p id="advGeneral" class="advisory-body">--</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Authority Escalation & Local Record History Grid -->
+    <div class="dashboard-grid">
+      <section class="panel">
+        <div class="panel-header">
+          <h2 class="panel-title">
+            <span class="panel-title-icon">🏛️</span> Designated Civic Authority &amp; Escalation Desk
+          </h2>
+        </div>
+        <div id="authorityContactContainer"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2 class="panel-title">
+            <span class="panel-title-icon">🕒</span> Local Record History (30-Min Sync)
+          </h2>
+          <button class="btn-secondary" id="btnRefreshHistory" style="padding: 0.25rem 0.6rem; font-size: 0.75rem;">Refresh</button>
+        </div>
+        <div id="historyListContainer" class="history-list">
+          <p style="font-size: 0.82rem; color: var(--text-dim);">Loading local history...</p>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- Floating Streaming AI Chatbot -->
+  <button class="chatbot-fab" id="chatbotFab">
+    💬 CivicAI Assistant
+  </button>
+
+  <aside class="chatbot-drawer" id="chatbotDrawer">
+    <div class="chatbot-header">
+      <div>
+        <div style="font-weight: 700; font-size: 0.95rem;">🤖 CivicAI Live Assistant</div>
+        <div id="chatEngineSub" style="font-size: 0.72rem; color: var(--civic-cyan);">Streaming SSE Ready</div>
+      </div>
+      <button class="btn-modal-close" id="btnCloseChat">&times;</button>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-bubble ai">Hello! I am your CivicAQI Assistant. I can explain the current air quality brief, ask clarifying questions about local hotspots, or help draft an official notice in your preferred language and tone.</div>
+    </div>
+
+    <div class="chat-quick-prompts" id="chatQuickPrompts">
+      <button class="sample-chip" data-chat="What immediate actions should schools take right now?">School actions?</button>
+      <button class="sample-chip" data-chat="Yes, there is open garbage burning near Sector 9.">Confirm garbage burning</button>
+      <button class="sample-chip" data-chat="Write a polite WhatsApp alert for housing society residents in Hindi.">Hindi RWA alert</button>
+    </div>
+
+    <div class="chat-input-row">
+      <input type="text" id="chatInput" class="form-input" placeholder="Ask a question or reply to AI...">
+      <button class="btn-primary" id="btnSendChat" style="padding: 0.5rem 0.9rem;">Send</button>
+    </div>
+  </aside>
+
+  <!-- ADC Service Account, Gemini & Firebase Configuration Modal -->
+  <div class="modal-backdrop" id="apiConfigModal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h2 class="modal-title">🔑 Google ADC Service Account &amp; Auth Config</h2>
+        <button class="btn-modal-close" id="btnCloseApiConfig">&times;</button>
+      </div>
+
+      <div id="adcStatusBanner" style="background: rgba(37, 99, 235, 0.12); border: 1px solid rgba(59, 130, 246, 0.4); padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); font-size: 0.82rem;">
+        Checking server ADC / Service Account status...
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="serviceAccountFile">Upload Service Account JSON (ADC)</label>
+        <input type="file" id="serviceAccountFile" accept=".json" class="form-input" style="padding: 0.4rem;">
+        <textarea id="serviceAccountInput" class="ingest-box" style="min-height: 90px; font-family: monospace; font-size: 0.78rem;" placeholder='Or paste Service Account JSON here: { "type": "service_account", "project_id": "...", "private_key": "...", "client_email": "..." }'></textarea>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="gcpProjectInput">GCP Project ID</label>
+          <input type="text" id="gcpProjectInput" class="form-input" placeholder="Auto-detected from Service Account">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="gcpLocationInput">Vertex AI Region</label>
+          <input type="text" id="gcpLocationInput" class="form-input" value="us-central1" placeholder="us-central1">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="geminiModelSelect">Gemini Model</label>
+        <select id="geminiModelSelect" class="form-select">
+          <option value="gemini-2.5-flash">gemini-2.5-flash (Fast Multimodal + Streaming)</option>
+          <option value="gemini-2.5-pro">gemini-2.5-pro (Deep Policy &amp; Complex Tables)</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="geminiKeyInput">Optional: Gemini API Key (If not using ADC)</label>
+          <input type="password" id="geminiKeyInput" class="form-input" placeholder="AIzaSy... (Leave blank for ADC)">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="firebaseKeyInput">Firebase Web API Key (Optional)</label>
+          <input type="password" id="firebaseKeyInput" class="form-input" placeholder="AIzaSy... (Leave blank for Local CivicAuth)">
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; gap: var(--space-sm); margin-top: var(--space-xs);">
+        <button class="btn-secondary" id="btnClearApiKeys">Clear Local Creds</button>
+        <button class="btn-primary" id="btnSaveApiConfig">Save Configuration</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase Auth Login / Sign-Up & Civic Profile Modal -->
+  <div class="modal-backdrop" id="authModal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h2 class="modal-title">🔐 Firebase Civic Login &amp; RBAC Profile</h2>
+        <button class="btn-modal-close" id="btnCloseAuth">&times;</button>
+      </div>
+
+      <div class="tab-row auth-tabs">
+        <button class="tab-btn active" id="tabLoginMode">Sign In</button>
+        <button class="tab-btn" id="tabSignupMode">Register Civic Account</button>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="authEmail">Email Address</label>
+          <input type="email" id="authEmail" class="form-input" placeholder="officer@mcd.gov.in">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="authPassword">Password</label>
+          <input type="password" id="authPassword" class="form-input" placeholder="••••••••">
+        </div>
+      </div>
+
+      <div id="signupFieldsContainer" style="display: none; flex-direction: column; gap: var(--space-sm);">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="authName">Full Name</label>
+            <input type="text" id="authName" class="form-input" placeholder="Er. Rajesh V. Sharma">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="authRole">Designation / Authority Role</label>
+            <select id="authRole" class="form-select">
+              <option value="super_admin">Super Admin (Special Privileges)</option>
+              <option value="ward_officer">Ward Officer / Municipal Admin</option>
+              <option value="housing_society">Housing Society / RWA President</option>
+              <option value="school">School Principal / Administrator</option>
+              <option value="commercial">Commercial / Industrial Lead</option>
+              <option value="citizen">Local Citizen / Resident</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="authAuthority">Authority / Organization Name</label>
+          <input type="text" id="authAuthority" class="form-input" placeholder="e.g., MCD Rohini Zone / Greenview RWA">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="authAddress">Full Address</label>
+            <input type="text" id="authAddress" class="form-input" placeholder="Sector 9, Rohini, New Delhi">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="authPincode">Pincode</label>
+            <input type="text" id="authPincode" class="form-input" value="110085" maxlength="6">
+          </div>
+        </div>
+      </div>
+
+      <div id="authStatusMsg" style="font-size: 0.8rem; color: var(--civic-cyan);"></div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: var(--space-sm); flex-wrap: wrap;">
+        <button class="btn-secondary" id="btnDemoCitizen" style="font-size: 0.78rem;">Switch to Citizen Demo</button>
+        <button class="btn-primary" id="btnSubmitAuth">Sign In</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Escalation Memo Modal -->
+  <div class="modal-backdrop" id="escalateModal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h2 class="modal-title">Official Environmental Escalation Notice</h2>
+        <button class="btn-modal-close" id="btnCloseEscalate">&times;</button>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-muted);">
+        This official directive is pre-filled using current sensor data and legal statutes (Section 133 CrPC / Air Act 1981).
+      </p>
+      <textarea id="escalateFormContent" class="ingest-box" style="min-height: 260px; font-family: monospace; font-size: 0.85rem;"></textarea>
+      <div style="display: flex; justify-content: flex-end; gap: var(--space-sm);">
+        <button class="btn-secondary" onclick="window.print()">🖨️ Print Directive</button>
+        <button class="btn-primary" id="btnConfirmDispatch">Dispatch Notice to Municipal Authorities</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="civic-footer">
+    <p>CivicAQI Intelligence Platform &copy; 2026 | Built with pure Vanilla HTML5, CSS3, ES6+ JS &amp; Native Node.js</p>
+    <p style="margin-top: 0.25rem;">Powered by Google Gemini Multimodal Streaming, Firebase Auth &amp; CPCB Open Data</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="mock-data.js"></script>
+  <script src="chart-engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

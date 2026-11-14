@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CivicAQI — Executive Intelligence & System Summary</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 1.5cm;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      color: #1e293b;
+      background: #ffffff;
+      margin: 0;
+      padding: 0;
+      font-size: 11pt;
+    }
+    .header-band {
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    h1 {
+      color: #0f172a;
+      font-size: 20pt;
+      margin: 0 0 4px 0;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      color: #2563eb;
+      font-size: 11pt;
+      font-weight: 600;
+      margin: 0;
+    }
+    .meta-tag {
+      font-size: 9pt;
+      color: #64748b;
+      text-align: right;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 8.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .badge-primary { background: #dbeafe; color: #1e40af; }
+    .badge-severe { background: #fee2e2; color: #991b1b; }
+    .badge-gov { background: #ccfbf1; color: #0f766e; }
+
+    h2 {
+      font-size: 13pt;
+      color: #0f172a;
+      border-left: 4px solid #2563eb;
+      padding-left: 8px;
+      margin: 18px 0 10px 0;
+    }
+    p {
+      margin: 0 0 10px 0;
+      text-align: justify;
+    }
+    .problem-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 12px;
+      margin-bottom: 14px;
+      font-style: italic;
+      color: #334155;
+      font-size: 10pt;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 16px 0;
+      font-size: 9.5pt;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 6px 10px;
+      text-align: left;
+    }
+    th {
+      background: #f1f5f9;
+      color: #0f172a;
+      font-weight: 700;
+    }
+    .grid-2 {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+    .card {
+      flex: 1;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 10px;
+      background: #f8fafc;
+    }
+    .card-title {
+      font-weight: 700;
+      color: #1e40af;
+      margin-bottom: 4px;
+      font-size: 10pt;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+    .footer {
+      margin-top: 24px;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 8px;
+      font-size: 8.5pt;
+      color: #94a3b8;
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-band">
+    <div>
+      <h1>CivicAQI — Executive Intelligence Summary</h1>
+      <p class="subtitle">AI-Driven Civic Intelligence & Hyper-Local Air Quality Interventions</p>
+    </div>
+    <div class="meta-tag">
+      <strong>Platform Release:</strong> v1.0.0<br>
+      <strong>Date:</strong> November 2026<br>
+      <span class="badge badge-primary">Promptswar Architecture</span>
+    </div>
+  </div>
+
+  <h2>1. Official Problem Mandate</h2>
+  <div class="problem-box">
+    "Develop an AI-driven civic intelligence solution that enables local authorities, housing societies, and ward-level teams to turn raw air quality data into actionable local interventions. The solution must leverage Generative AI as a core component to interpret pasted or uploaded data tables, including messy ones with inconsistent formats, units, or missing readings, and summarize trends and likely hotspots in plain language. It should recommend prioritized local actions suited to who is asking, since a ward officer, a housing society, and a school can each do different things. Every finding should be traceable to the underlying data, with data gaps and unreliable readings clearly flagged. The assistant should compare each new brief with the previous one to show what changed, and generate both an internal briefing note and a citizen advisory in multiple languages, written for different reading levels, with extra care for children, older adults, and people sensitive to poor air."
+  </div>
+
+  <h2>2. Architectural Foundations & Deliverables</h2>
+  <p>
+    The CivicAQI platform was systematically architected from ground zero through four comprehensive foundational specifications:
+  </p>
+  <ul>
+    <li><strong>PRD.md (Product Requirements Document):</strong> Establishes functional requirements FR-1 through FR-10, five distinct civic personas, and measurable KPIs.</li>
+    <li><strong>TRD.md (Technical Requirements Document):</strong> Defines the zero-framework runtime topology, native REST endpoints, and security boundaries.</li>
+    <li><strong>DESIGN.md (System Design Document):</strong> Details Mermaid data pipelines, responsive <code>vw</code>/<code>vh</code>/<code>rem</code> layouts, and brief-to-brief delta calculation logic.</li>
+    <li><strong>PROMPTS.md (Master Prompt Engineering):</strong> Contains few-shot system prompts for multimodal table/vision normalization, 200–300 word executive summaries, and multi-lingual vulnerability stratification.</li>
+  </ul>
+
+  <h2>3. Core Innovation Pillars</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 28%;">Capability</th>
+        <th>Engineering Implementation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Multimodal Ingestion</strong></td>
+        <td>Parses unstructured text, raw CSV/TSV tables, regional language statements, and digital monitor display photos without hallucinating omitted metrics.</td>
+      </tr>
+      <tr>
+        <td><strong>Live Ground Truth Cross-Validation</strong></td>
+        <td>Queries live Open-Meteo Air Quality & India Post Pincode APIs, correlated against CPCB/State PCB stations (Rohini, Anand Vihar, RK Puram, BKC, etc.) to detect micro-climate anomalies.</td>
+      </tr>
+      <tr>
+        <td><strong>Brief-to-Brief Historical Delta (Δ)</strong></td>
+        <td>Computes <code>Δ AQI = AQI_t - AQI_(t-1)</code>, percentage shifts, and categorized trajectory tags (WORSENING, IMPROVING, STABLE) every 30 minutes.</td>
+      </tr>
+      <tr>
+        <td><strong>Role-Based Access Control (RBAC)</strong></td>
+        <td>Super Admins & Ward Officers hold direct intervention assignment privileges; RWAs, Schools, and Citizens submit structured requests to designated civic bodies.</td>
+      </tr>
+      <tr>
+        <td><strong>Native Canvas Visualizations</strong></td>
+        <td>Pure HTML5 2D Canvas charting pipeline rendering 24-hr smoothed Bezier curves and multi-pollutant safety threshold bars without third-party libraries.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-break"></div>
+
+  <h2>4. Role-Specific Prioritized Intervention Matrix</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Persona / Entity</th>
+        <th style="width: 35%;">P0 Immediate Directives (0–2 Hours)</th>
+        <th style="width: 40%;">P1 Precautionary Interventions (4–24 Hours)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Ward Officer / Municipal Admin</strong></td>
+        <td>Dispatch mobile high-pressure water misting guns to major traffic arterial points; issue stop-work orders for uncurtained excavation sites.</td>
+        <td>Deploy mechanized vacuum sweepers during off-peak night hours; coordinate traffic diversions to bypass residential zones.</td>
+      </tr>
+      <tr>
+        <td><strong>Housing Society / RWA</strong></td>
+        <td>Curtail continuous diesel generator runtime; activate driveway boundary misting sprinklers twice daily.</td>
+        <td>Broadcast WhatsApp smog alerts to residents; enforce strict vehicle no-idling rules at entrance security gates.</td>
+      </tr>
+      <tr>
+        <td><strong>School / Educational Authority</strong></td>
+        <td>Immediately suspend all outdoor sports, morning assemblies, and open-air recess; activate classroom HEPA air purifiers.</td>
+        <td>Mandate N95 masks during bus transit; establish an emergency infirmary respiratory triage with nebulizer support.</td>
+      </tr>
+      <tr>
+        <td><strong>Commercial & Construction Leads</strong></td>
+        <td>Upgrade HVAC filtration to MERV 13 with indoor air recirculation; cover all sand and cement aggregate piles with tarpaulins.</td>
+        <td>Stagger worker morning arrival shifts away from nocturnal temperature inversion peaks; conduct emission audits on heavy haulers.</td>
+      </tr>
+      <tr>
+        <td><strong>Citizens & Vulnerable Households</strong></td>
+        <td>Avoid morning cardio and outdoor exertion; wear certified, fitted N95/FFP2 respirators when stepping outdoors.</td>
+        <td>Submit geo-tagged grievance tickets for open garbage or biomass burning using the platform's Section 133 escalation generator.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>5. Multi-Lingual Citizen Advisories & Vulnerability Tiers</h2>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">🧒 Children & Students</div>
+      <p style="font-size: 9pt; margin: 0;"><strong>English:</strong> Suspend outdoor play. Keep classroom windows sealed. Wear N95 masks when commuting.<br><strong>हिंदी:</strong> सभी आउटडोर खेल तुरंत बंद करें। स्कूल आते-जाते समय N95 मास्क अवश्य पहनें।</p>
+    </div>
+    <div class="card">
+      <div class="card-title">🧓 Older Adults & Sensitive Patients</div>
+      <p style="font-size: 9pt; margin: 0;"><strong>English:</strong> Stay indoors. Avoid early morning walks. Keep inhalers and prescribed medication accessible.<br><strong>हिंदी:</strong> घर के अंदर ही रहें। सुबह की सैर से बचें और दवाइयां व इनहेलर हमेशा पास रखें।</p>
+    </div>
+  </div>
+
+  <h2>6. Technology Stack & ADC Integration Architecture</h2>
+  <ul>
+    <li><strong>Runtime:</strong> Native Node.js HTTP/HTTPS server with zero npm runtime dependencies.</li>
+    <li><strong>UI Framework:</strong> Pure Vanilla HTML5 and CSS3 using fluid <code>vw</code>, <code>vh</code>, <code>rem</code>, and <code>clamp()</code> scaling.</li>
+    <li><strong>AI Intelligence & Streaming:</strong> Google Vertex AI Gemini models authenticated via Service Account Application Default Credentials (ADC) using native RS256 JWT signing, supporting SSE streaming chat.</li>
+    <li><strong>Authentication:</strong> Firebase Authentication REST API with complete local fallback profile persistence in <code>data/users.json</code>.</li>
+  </ul>
+
+  <div class="footer">
+    <span>CivicAQI Intelligence Platform &bull; Repository: promptswar</span>
+    <span>Page 2 of 2</span>
+  </div>
+
+</body>
+</html>

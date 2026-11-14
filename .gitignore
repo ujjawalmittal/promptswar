@@ -1,0 +1,18 @@
+# Secrets & Credentials (NEVER commit to public repositories)
+.env
+*.pem
+service-account*.json
+*service_account*.json
+credentials.json
+users.json
+
+# Local Data Cache
+data/users.json
+data/assigned_actions.json
+
+# Dependencies & IDE
+node_modules/
+.vscode/
+.history/
+.DS_Store
+Thumbs.db
